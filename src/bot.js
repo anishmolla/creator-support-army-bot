@@ -10,6 +10,7 @@ function getDisplayName(user) {
 
 require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
+const express = require('express');
 
 let fetch = null;
 try {
@@ -682,3 +683,20 @@ Future me ek charity channel banega jisme creators milkar logon ki help karenge.
 Enjoy & grow together!
 `;
 
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('CSA Agreement Court bot is running ✅');
+});
+
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    time: new Date().toISOString(),
+  });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`HTTP health server listening on port ${PORT}`);
+});
