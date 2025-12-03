@@ -1,0 +1,14 @@
+{
+  "name": "csa-ai-judge-bot",
+  "version": "2.0.0",
+  "description": "Creator Support Army – AI Judge Powered Agreement & Court Bot",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.0",
+    "node-telegram-bot-api": "^0.63.0"
+  }
+}
